@@ -173,7 +173,7 @@ print('''We are going to explore how the following affect our model:
         - Learning rate
         - Structure
         - Number of epochs
-        - Training - test split
+        - Training / test split
         32 total models: 16 XOR models and 16 binary addition\n''')
     
 def test_train_split(split, dataset):
@@ -244,3 +244,4 @@ print(''' Best binary model:
     Training accuracy: 0.9762
     Testing accuracy: 1.0
     ''')
+
