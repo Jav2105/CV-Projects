@@ -1,1 +1,3 @@
-
+- descent.py: main class. Execute one of the algorithms, or the optimized algorithm which combines them.
+- damped_newton.py, bfgs.py, l_bfgs.py, gradient_descent.py: functions for optimization algorithms.
+- main.py. Functions and results for said functions. Uncomment and execute, add new functions or edit the existing settings.
