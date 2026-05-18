@@ -1,0 +1,5 @@
+transformers[torch]
+datasets
+evaluate
+numpy
+accelerate>=1.1.0

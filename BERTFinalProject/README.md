@@ -1,1 +1,24 @@
 
+# CODE STRUCTURE
+- main.py: function that executes the code. It imports the data, defines the tokenizer functions and metrics and uses the pipeline function to train and evaluate the models.
+- pipeline.py: contains the main process which trains and evaluates the model with the pipeline function. To simplify the code, it receives its tokenizer functions and metrics from main.py through global variables.
+- configs.py: contains the configuration (number of layers, number of neurons, etc.) for BERT and GPT, used later in pipeline.py.
+- my_tokenizers.py: contains tokenizers used in all of the other code files.
+
+# OTHER FILES
+- requirements.txt: states the libraries that need to be installed in order to run the code. To install them, run pip install -r requirements.txt.
+- _saved files: contain the weights and configuration for the trained model. Useful to evaluate without having to retrain the model.
+- _results files: contain the results from the previous execution at the different checkpoints, with the training losses. Not needed for running the code again. Not included in the code because of their large size (tens of gigabytes). To obtain them, the models have to be retrained.
+
+# REQUIRED LIBRARIES (requirements.txt)
+- transformers (Hugging Face)
+- datasets
+- evaluate
+- numpy
+
+# INSTRUCTIONS
+Run main.py. In pipeline.py, set RETRAIN to False if you do not want the training to rerun, set it to True if you want to overwrite the saved results. If RETRAIN is set to False and there are _saved files already, it will return the metrics obtained from the evaluation.
+
+# CODE ORIGINALITY
+Going into this project, I had no prior experience using Hugging Face and its transformers library. Thus, I have used Generative AI a support tool for debugging and for understanding how certain libraries function. In some cases, suggested code snippets were incorporated into the project. However, overall design decisions, integration, and final implementation were developed independently.
+In addition, https://huggingface.co/docs/transformers/index was also used to learn how functions from the transformers library work.
